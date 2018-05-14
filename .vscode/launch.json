@@ -56,7 +56,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "HelloWorld.py"
+                "FLASK_APP": "./HelloWorld.py"
             },
             "args": [
                 "run",

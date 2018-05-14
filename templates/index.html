@@ -12,14 +12,23 @@
     </section>
     <section>
         <h2>Stored URLs</h2>
-        {% with messages = get_flashed_messages() %} {% if messages %}
+        <!-- {% with messages = get_flashed_messages() %} {% if messages %}
         <ul>
             {% for message in messages %}
             <li>{{ message }}</li>
             {% endfor %}
         </ul>
-        {% endif %} {% endwith %}
+        {% endif %} {% endwith %} -->
 
+        {% if new_bookmarks %}
+        <ul>
+            {% for bm in new_bookmarks %}
+            <li>{{ bm.url }}</li>
+            {% endfor %}
+        </ul>
+        {%else%}
+        No BookMark yet...!
+        {% endif %}
     </section>
     <footer>
         <h3>article footer h3</h3>
